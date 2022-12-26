@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/ScottoProfolio/static/css/main.c220565e.css",
+    "main.js": "/ScottoProfolio/static/js/main.1fe1bd9e.js",
+    "index.html": "/ScottoProfolio/index.html",
+    "main.c220565e.css.map": "/ScottoProfolio/static/css/main.c220565e.css.map",
+    "main.1fe1bd9e.js.map": "/ScottoProfolio/static/js/main.1fe1bd9e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c220565e.css",
+    "static/js/main.1fe1bd9e.js"
+  ]
+}
