@@ -12,7 +12,7 @@ function HeroSection() {
 
         {/* Left side picture of myself */}
         <div className="section-item1">
-            <img src="ColorCutout.Png" alt="ME"/>
+            <img src="ColorCutout.png" alt="ME"/>
         </div>
         {/* Welcome message */}
         <div className="section-item2">
