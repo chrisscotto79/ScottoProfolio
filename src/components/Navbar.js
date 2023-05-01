@@ -13,7 +13,7 @@ function Navbar() {
     <>
       <nav className='navbar'>
         <div className='navbar-container'>
-          <Link to='/' className='navbar-logo' >
+          <div className='navbar-logo' >
             <TypeAnimation
               sequence={[
               'CS',
@@ -37,7 +37,7 @@ function Navbar() {
               
             />
             
-          </Link>
+          </div>
          
         </div>
       </nav>

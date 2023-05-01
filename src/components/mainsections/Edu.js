@@ -16,10 +16,11 @@ function Edu(){
                   Florida Gulf Coast University
                   </h2>
                   <p>
-                      Software Enginering BA Degree 2026
+                      Software Enginering BS Degree 2026
                   </p>
                   
-                    <img src="main_logo1.png" alt="fgcu"/>
+                    {/* Grab the image "Main_logo1.png from the public file" */}
+                    <img src={process.env.PUBLIC_URL + '/images/main_logo1.png'} alt="Its me" /> 
               </div>
               </div>
           </div>

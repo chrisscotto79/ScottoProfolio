@@ -4,6 +4,7 @@ import './HeroSection.css';
 
 
 
+
 function HeroSection() {
     
   return (
@@ -12,7 +13,7 @@ function HeroSection() {
 
         {/* Left side picture of myself */}
         <div className="section-item1">
-            <img src="ColorCutout.Png" alt="ME"/>
+          <img src={process.env.PUBLIC_URL + '/images/ColorCutout.png'} alt="Its me" /> 
         </div>
         {/* Welcome message */}
         <div className="section-item2">
