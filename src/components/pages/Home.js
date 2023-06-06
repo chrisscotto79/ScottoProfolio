@@ -1,19 +1,24 @@
 import React from 'react';
 import '../../App.css';
 import HeroSection from '../mainsections/HeroSection';
-import Edu from '../mainsections/Edu';
+import About from '../mainsections/AboutMe';
 import PastProjects from '../mainsections/pastprojects'
+import ContactForm from '../mainsections/Contact';
 
 
-function Home() {
-    
+const Home = () => {
+
   return (
-    <>
-      <HeroSection />
-      <PastProjects />
-      <Edu />
-    </>
-  );
-}
+    <div>
+    <HeroSection scrollToId="section1" />
+    <PastProjects />
+    <section id="section1">
+      <About />
+    </section>
+    <ContactForm />
+    
+  </div>
+  )
+};
 
 export default Home;

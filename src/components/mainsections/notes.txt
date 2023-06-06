@@ -1,0 +1,11 @@
+Ponder 
+Ponder is a powerful tool designed to facilitate brainstorming and idea mapping. Having successfully utilized it in previous projects, I have dedicated my free time to continuously enhance its functionality. It is my pleasure to offer the code freely, allowing you to utilize and customize it according to your specific requirements and preferences.
+
+Discord
+Multiple projects that have been assosiated with discord. Discord is where I started my coding adventure. Visit my github scripts on github to see some of the commands I have created. As of the momment, Discord is currently my favorite and most comfortable area to program.
+
+Food Scraper
+A Discord bassed food price Scraper. Currently ran with a discord command based action but can be rewritten with a website or soley through the terminal. Scrapes the given website to get the product number, price, and quantity to a CSV. Small project created for my brother.
+
+SFE
+Welcome to Scotto Financial Enterprise, your simplified stock market investing platform. We are dedicated to helping you succeed in the stock market by providing user-friendly tools, educational resources, and valuable insights. At Scotto Financial Enterprise, we believe in the power of the stock market to create financial opportunities. Our mission is to make stock market investing accessible and understandable for everyone, regardless of their experience level.
