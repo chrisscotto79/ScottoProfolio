@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/ScottoProfolio/static/css/main.0ca2e810.css",
-    "main.js": "/ScottoProfolio/static/js/main.67c32e53.js",
+    "main.css": "/ScottoProfolio/static/css/main.759dd8e5.css",
+    "main.js": "/ScottoProfolio/static/js/main.e6337d56.js",
     "index.html": "/ScottoProfolio/index.html",
-    "main.0ca2e810.css.map": "/ScottoProfolio/static/css/main.0ca2e810.css.map",
-    "main.67c32e53.js.map": "/ScottoProfolio/static/js/main.67c32e53.js.map"
+    "main.759dd8e5.css.map": "/ScottoProfolio/static/css/main.759dd8e5.css.map",
+    "main.e6337d56.js.map": "/ScottoProfolio/static/js/main.e6337d56.js.map"
   },
   "entrypoints": [
-    "static/css/main.0ca2e810.css",
-    "static/js/main.67c32e53.js"
+    "static/css/main.759dd8e5.css",
+    "static/js/main.e6337d56.js"
   ]
 }
