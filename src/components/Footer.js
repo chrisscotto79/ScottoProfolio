@@ -13,10 +13,10 @@ function Footer() {
           Chrisscotto1@outlook.com 
         </a>
         <div className="icon-section">
-          <a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer" className="icon-link">
+          <a href="https://github.com/chrisscotto79" target="_blank" rel="noopener noreferrer" className="icon-link">
             <FaGithub />
           </a>
-          <a href="https://linkedin.com/in/your-username" target="_blank" rel="noopener noreferrer" className="icon-link">
+          <a href="https://www.linkedin.com/in/christopher-scotto-0828a9272/" target="_blank" rel="noopener noreferrer" className="icon-link">
             <FaLinkedin />
           </a>
         </div>

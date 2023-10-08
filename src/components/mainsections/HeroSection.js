@@ -22,7 +22,7 @@ const HeroSection = ({ scrollToId }) => {
 
         {/* Left side picture of myself */}
         <div className="section-item1">
-          <img src={process.env.PUBLIC_URL + '/images/color_cutout.png'} alt="Its me" />
+          <img src={process.env.PUBLIC_URL + '/images/cutout.png'} alt="Its me" />
         </div>
         {/* Welcome message */}
         <div className="section-item2">
