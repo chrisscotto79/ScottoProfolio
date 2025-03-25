@@ -4,15 +4,13 @@ on:
   branch_protection_rule:
   # To guarantee Maintained check is occasionally run.
   schedule:
-    - cron: '20 7 * * 2'
+    - cron: '20 7 * *2'
   push:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
-
 # Declare default permissions as read-only.
 permissions: read-all
-
 jobs:
   analysis:
     name: Scorecard analysis
@@ -25,13 +23,11 @@ jobs:
       # Enable permissions to publish results to OpenSSF
       contents: read
       actions: read
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v3.1.0
         with:
           persist-credentials: false
-
       - name: Run analysis
         uses: ossf/scorecard-action@e38b1902ae4f44df626f11ba0734b14fb91f8f86  # v2.1.2
         with:
@@ -41,7 +37,8 @@ jobs:
           repo_token: ${{ github.token }}
           # Publish the results for others to see
           publish_results: true
-
+          # Explicitly specify your repository
+          repo: github.com/chrisscotto79/ScottoProfolio
       # Upload the results to GitHub's code scanning dashboard.
       - name: Upload to code-scanning
         uses: github/codeql-action/upload-sarif@v2
