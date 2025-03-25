@@ -1,23 +1,63 @@
 name: Scorecard
-
 on:
+  # For Branch-Protection check. Only the default branch is supported.
+  branch_protection_rule:
+  # To guarantee Maintained check is occasionally run.
+  schedule:
+    - cron: '20 7 * * 2'
   push:
-    branches:
-      - main
+    branches: [ "main" ]
   pull_request:
-    branches:
-      - main
+    branches: [ "main" ]
+
+# Declare default permissions as read-only.
+permissions: read-all
 
 jobs:
-  scorecard:
+  analysis:
+    name: Scorecard analysis
     runs-on: ubuntu-latest
+    permissions:
+      # Needed to upload the results to code-scanning dashboard.
+      security-events: write
+      # Needed to publish results and get a badge (see publish_results below).
+      id-token: write
+      # Uncomment the permissions below if you want to contribute your results to the OpenSSF registry.
+      # contents: read
+      # actions: read
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          persist-credentials: false
 
-    - name: Run Scorecard
-      uses: ossf/scorecard-action@v2  # Updated to use v2 instead of v2.5.0
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Run analysis
+        uses: ossf/scorecard-action@v2.1.2
+        with:
+          results_file: results.sarif
+          results_format: sarif
+          # A read-only PAT token for public repositories
+          # repo_token: ${{ secrets.SCORECARD_TOKEN }}
+          # When using GitHub Enterprise, you can specify the URL with:
+          # url: https://github.my-company.com/api/v3
+          # Public repositories:
+          repo_token: ${{ github.token }}
+          # Private repositories:
+          # repo_token: ${{ secrets.SCORECARD_READ_TOKEN }}
+          # Publish the results for later use
+          publish_results: true
 
+      # Upload the results as artifacts.
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: SARIF file
+          path: results.sarif
+          retention-days: 5
+
+      # Upload the results to GitHub's code scanning dashboard.
+      - name: Upload to code-scanning
+        uses: github/codeql-action/upload-sarif@v2
+        with:
+          sarif_file: results.sarif
