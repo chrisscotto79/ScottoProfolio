@@ -37,20 +37,14 @@ jobs:
         with:
           results_file: results.sarif
           results_format: sarif
-          # A read-only PAT token for public repositories
-          # repo_token: ${{ secrets.SCORECARD_TOKEN }}
-          # When using GitHub Enterprise, you can specify the URL with:
-          # url: https://github.my-company.com/api/v3
           # Public repositories:
           repo_token: ${{ github.token }}
-          # Private repositories:
-          # repo_token: ${{ secrets.SCORECARD_READ_TOKEN }}
           # Publish the results for later use
           publish_results: true
 
       # Upload the results as artifacts.
       - name: Upload artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v2
         with:
           name: SARIF file
           path: results.sarif
