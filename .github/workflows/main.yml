@@ -1,0 +1,22 @@
+name: Scorecard
+
+on:
+  push:
+    branches:
+      - main  # Adjust if you use a different branch
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  scorecard:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Run Scorecard
+      uses: ossf/scorecard-action@v2
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
