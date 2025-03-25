@@ -4,7 +4,7 @@ on:
   branch_protection_rule:
   # To guarantee Maintained check is occasionally run.
   schedule:
-    - cron: '20 7 * * 2'
+    - cron: '20 7 * * 2'  # Fixed spacing
   push:
     branches: [ "main" ]
   pull_request:
@@ -37,8 +37,6 @@ jobs:
           repo_token: ${{ github.token }}
           # Publish the results for others to see
           publish_results: true
-          # Explicitly specify your repository
-          repo: github.com/chrisscotto79/ScottoProfolio
       # Upload the results to GitHub's code scanning dashboard.
       - name: Upload to code-scanning
         uses: github/codeql-action/upload-sarif@v2
