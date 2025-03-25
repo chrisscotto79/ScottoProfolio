@@ -21,7 +21,7 @@
     "react-type": "^0.1.0",
     "react-type-animation": "^2.1.2",
     "scrollreveal": "^4.0.9",
-    "tsparticles": "^2.3.4",
+    "tsparticles": "^3.8.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
