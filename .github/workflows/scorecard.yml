@@ -42,13 +42,8 @@ jobs:
           # Publish the results for later use
           publish_results: true
 
-      # Upload the results as artifacts.
-      - name: Upload artifact
-        uses: actions/upload-artifact@v2
-        with:
-          name: SARIF file
-          path: results.sarif
-          retention-days: 5
+      # Skip the upload artifact step since it's causing issues
+      # We'll still upload to code-scanning which is what we need for the badge
 
       # Upload the results to GitHub's code scanning dashboard.
       - name: Upload to code-scanning
