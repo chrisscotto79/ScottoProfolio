@@ -22,28 +22,25 @@ jobs:
       security-events: write
       # Needed to publish results and get a badge (see publish_results below).
       id-token: write
-      # Uncomment the permissions below if you want to contribute your results to the OpenSSF registry.
-      # contents: read
-      # actions: read
+      # Enable permissions to publish results to OpenSSF
+      contents: read
+      actions: read
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v3.1.0
         with:
           persist-credentials: false
 
       - name: Run analysis
-        uses: ossf/scorecard-action@v2.1.2
+        uses: ossf/scorecard-action@e38b1902ae4f44df626f11ba0734b14fb91f8f86  # v2.1.2
         with:
           results_file: results.sarif
           results_format: sarif
           # Public repositories:
           repo_token: ${{ github.token }}
-          # Publish the results for later use
+          # Publish the results for others to see
           publish_results: true
-
-      # Skip the upload artifact step since it's causing issues
-      # We'll still upload to code-scanning which is what we need for the badge
 
       # Upload the results to GitHub's code scanning dashboard.
       - name: Upload to code-scanning
