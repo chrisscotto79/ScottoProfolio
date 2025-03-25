@@ -1,6 +1,7 @@
 # Getting Started with Create React App
 
 ![OpenSSF Scorecard](https://img.shields.io/ossf-scorecard/github.com/chrisscotto79/ScottoProfolio?label=openssf%20scorecard&style=for-the-badge)
+[![OpenSSF Best Practices](https://bestpractices.coreinfrastructure.org/projects/10320/badge)](https://bestpractices.coreinfrastructure.org/projects/10320)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
